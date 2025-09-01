@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumentador de Texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        p {
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aumente o Texto</h1>
+    <p id="paragrafo-texto">Clique no botão para deixar este texto maior!</p>
+    <button id="btn-aumentar">Aumentar Fonte</button>
+    <script>
+        let tamanhoFonte = 16;
+        let botao = window.document.getElementById('btn-aumentar')
+        let p = window.document.getElementById('paragrafo-texto')
+       botao.addEventListener('click',aumentarfonte );
+       function aumentarfonte(params) {
+            tamanhoFonte += 2;
+            p.style.fontSize = tamanhoFonte + "px";
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+    <style>
+        #area-interacao {
+            width: 300px;
+            height: 150px;
+            background-color: lightblue;
+            border: 2px solid #333;
+            text-align: center;
+            line-height: 150px;
+            font-size: 1.2em;
+            margin: 50px auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="area-interacao">Passe o mouse aqui!</div>
+    <script>
+        var a = window.document.getElementById('area-interacao')
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
+        function entrar(params) {
+            a.innerText = 'Você entrou!'
+        }
+        function sair(params) {
+            a.innerText = 'Passe o mouse aqui'
+        }
+    </script>
+</body>
+</html>

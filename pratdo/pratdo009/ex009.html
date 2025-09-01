@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+    <style>
+        img {
+            width: 300px;
+            cursor: pointer;
+            border: 3px solid #333;
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Passe o mouse sobre a imagem</h1>
+    <img id="imagem-hover" src="https://via.placeholder.com/300/CCCCCC/808080?text=Mouse+Fora">
+    <script>
+        var img = window.document.getElementById('imagem-hover')
+        img.addEventListener('mouseenter', entrar);
+        img.addEventListener('mouseout', sair);
+
+    function entrar(params) {
+        img.src = 'https://via.placeholder.com/300/808080/FFFFFF?text=Mouse+Dentro.'
+    }
+
+function sair(params) {
+    img.src = 'https://via.placeholder.com/300/CCCCCC/808080?text=Mouse+Fora'
+}
+    </script>
+</body>
+</html>

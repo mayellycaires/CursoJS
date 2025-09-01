@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            transition: background-color 0.5s;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clique no botão para mudar de cor de fundo</h1>
+    <button id="meuBotao">Mudar de Cor</button>
+    <script>
+        var b = window.document.getElementById('meuBotao')
+        b.addEventListener('click', mudarCordoFundo);
+        function mudarCordoFundo(params) {
+            document.body.style.backgroundColor = 'red'
+        }
+    </script>
+</body>
+</html>

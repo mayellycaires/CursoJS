@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando números para moeda</title>
+</head>
+<body>
+    <script>
+        var moeda = Number(window.prompt('Digite o seu salário: '))
+        window.alert(`O seu salário é de ${moeda.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em Reais`)
+        window.alert(`O seu salário em Dolar Americano é ${moeda.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}`)
+    </script>
+</body>
+</html>
