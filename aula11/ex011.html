@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou Estrangeiro</title>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro</h1>
+    <p>
+        Digite o seu país: <input type="txt1" name="txt1" id="txt1">
+        <input type="button" value="Analisar" id="bnt-analisar">
+    </p>
+    <div id="res"></div>
+
+    <script>
+        // Seleciona os elementos do HTML
+        let país = window.document.querySelector('input#txt1');
+        let bnt = window.document.querySelector('input#bnt-analisar');
+        let div = window.document.querySelector('div#res');
+
+        //Adiciona o evento 'click' ao botão
+        bnt.addEventListener('click', analisar)
+
+        function analisar() {
+            // Pega o valor do campo e o converte para letras minúsculas
+            let paísDigitado = país.value.toUpperCase();
+
+            // Se for digitando BRASIL será Brasilerio
+            if(paísDigitado === 'BRASIL') {
+                div.innerHTML = 'Você é <strong>BRASILEIRO!</strong>';
+
+                // Caso contrário, é Estrangeiro.
+            } else {
+                div.innerHTML = 'Você é <strong>ESTRANGEIRO</strong>';
+            }
+        }
+    </script>
+</body>
+</html>
