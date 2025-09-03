@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Compra</title>
+</head>
+<body>
+    <h1>Total de Compra</h1>
+    <p>
+        Digite o valor Total: <input type="number" id="txtValor">
+        <input type="button" value="Verificar" id="bnt-verificar">
+    </p>
+    <div id="res"></div>
+    <script>
+        // Seleciona os elementos do HTML
+        let valor = window.document.querySelector('input#txtValor');
+        let bnt = window.document.querySelector('input#bnt-verificar');
+        let div = window.document.querySelector('div#res');
+
+        // Adiciona o evento 'click' ao botão
+        bnt.addEventListener('click', verificar)
+
+        // Usa a lógica para verificar o valor
+        function verificar(){ 
+            // Pega o valor do campo e o converte para número
+            let valorDigitado = Number(valor.value);
+
+            // Formata o número para duas casas decimais e troca o ponto por vírgula
+            let valorFormatado = valorDigitado.toFixed(2).replace('.',',');
+
+            if (valorDigitado > 100){
+                div.innerHTML = `A sua compra foi de R$${valorFormatado}. <strong>O frete é GRÁTIS!</strong>`
+            } else {
+                div.innerHTML = `Sua compra foi de R$${valorFormatado}. <strong>O frete será COBRADO!</strong>`
+            }
+        }
+    </script>
+</body>
+</html>

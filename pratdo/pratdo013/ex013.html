@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Idade</title>
+</head>
+<body>
+    <h1>Verificação de Idade</h1>
+    <p>
+        Digite sua idade: <input type="number" id="txtIdade">
+        <input type="button" value="Varificar" id="bnt-verificar">
+    </p>
+    <div id="res"></div>
+    <script>
+        // Seleciona os elementos do HTML
+        let idade = window.document.querySelector('input#txtIdade');
+        let bnt = window.document.querySelector('input#bnt-verificar');
+        let div = window.document.querySelector('div#res');
+        // Adiciona o evento 'click' ao botão
+        bnt.addEventListener('click', verificar)
+
+        function verificar() {
+            // Pega o valor do campo e o converte para número
+            let idadeDigitada = Number(idade.value);
+
+            // Usa a lógica para verificar a idade
+            if (idadeDigitada >= 18){ // Usei >= para incluir 18 anos
+                div.innerHTML = `A sua idade é ${idadeDigitada}. <strong>MAIOR IDADE!</strong>`
+            
+            } else {
+                div.innerHTML = `A sua idade é ${idadeDigitada}. <strong>MENOR IDADE!</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
